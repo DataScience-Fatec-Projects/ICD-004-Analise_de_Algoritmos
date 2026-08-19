@@ -4,3 +4,6 @@ Objetivos de Aprendizagem: Analisar a complexidade intrínseca dos algoritmos qu
 
 ## Repo de referência Professor Humberto Zanetti:
 https://github.com/humbertozanetti/analisealgoritmos
+
+## livros e repos
+https://github.com/egonSchiele/grokking_algorithms
