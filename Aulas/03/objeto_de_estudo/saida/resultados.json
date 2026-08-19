@@ -1,0 +1,323 @@
+{
+  "config": {
+    "semente": 42,
+    "tamanhos": [
+      1000,
+      10000,
+      100000,
+      1000000
+    ],
+    "amostras_aleatorias": 25,
+    "orcamento_s": 0.2,
+    "python": "3.14.3"
+  },
+  "validacao": [
+    "OK: 6 alvos-chave conferidos em lista de 1000 itens.",
+    "OK: 500 alvos aleatorios - linear e binaria retornaram o mesmo indice em todos.",
+    "OK: passos da binaria <= floor(log2(n))+1 em todos os n testados (limite teorico respeitado).",
+    "OK: casos de borda (lista vazia e lista unitaria)."
+  ],
+  "medicoes": [
+    {
+      "algoritmo": "linear",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 1000,
+      "passos": 1.0,
+      "tempo_us": 0.4000003173132427,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 1000,
+      "passos": 9.0,
+      "tempo_us": 1.7000002117129043,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 1000,
+      "passos": 1000.0,
+      "tempo_us": 55.499999689345714,
+      "repeticoes": 2000,
+      "indice": 999
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 1000,
+      "passos": 10.0,
+      "tempo_us": 1.2999998943996616,
+      "repeticoes": 2000,
+      "indice": 999
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 1000,
+      "passos": 1000.0,
+      "tempo_us": 55.29999998543644,
+      "repeticoes": 2000,
+      "indice": -1
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 1000,
+      "passos": 9.0,
+      "tempo_us": 1.100000190490391,
+      "repeticoes": 2000,
+      "indice": -1
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "caso medio (aleatorio)",
+      "n": 1000,
+      "passos": 468.32,
+      "tempo_us": 20.500000573520083,
+      "repeticoes": 50000,
+      "indice": -2
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "caso medio (aleatorio)",
+      "n": 1000,
+      "passos": 9.28,
+      "tempo_us": 1.3999997463542968,
+      "repeticoes": 50000,
+      "indice": -2
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 10000,
+      "passos": 1.0,
+      "tempo_us": 0.2999995558639057,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 10000,
+      "passos": 13.0,
+      "tempo_us": 1.5999994502635673,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 10000,
+      "passos": 10000.0,
+      "tempo_us": 590.3000001126202,
+      "repeticoes": 320,
+      "indice": 9999
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 10000,
+      "passos": 14.0,
+      "tempo_us": 1.7000002117129043,
+      "repeticoes": 2000,
+      "indice": 9999
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 10000,
+      "passos": 10000.0,
+      "tempo_us": 571.1999992854544,
+      "repeticoes": 327,
+      "indice": -1
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 10000,
+      "passos": 13.0,
+      "tempo_us": 1.4000006558489986,
+      "repeticoes": 2000,
+      "indice": -1
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "caso medio (aleatorio)",
+      "n": 10000,
+      "passos": 4648.88,
+      "tempo_us": 230.80000028130598,
+      "repeticoes": 24245,
+      "indice": -2
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "caso medio (aleatorio)",
+      "n": 10000,
+      "passos": 12.16,
+      "tempo_us": 2.499999936844688,
+      "repeticoes": 50000,
+      "indice": -2
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 100000,
+      "passos": 1.0,
+      "tempo_us": 0.4000003173132427,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 100000,
+      "passos": 16.0,
+      "tempo_us": 3.000000106112566,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 100000,
+      "passos": 100000.0,
+      "tempo_us": 8938.199999647622,
+      "repeticoes": 24,
+      "indice": 99999
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 100000,
+      "passos": 17.0,
+      "tempo_us": 2.4000000848900527,
+      "repeticoes": 2000,
+      "indice": 99999
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 100000,
+      "passos": 100000.0,
+      "tempo_us": 8649.100000184262,
+      "repeticoes": 25,
+      "indice": -1
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 100000,
+      "passos": 16.0,
+      "tempo_us": 3.099999958067201,
+      "repeticoes": 2000,
+      "indice": -1
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "caso medio (aleatorio)",
+      "n": 100000,
+      "passos": 45625.44,
+      "tempo_us": 4283.300000224699,
+      "repeticoes": 6451,
+      "indice": -2
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "caso medio (aleatorio)",
+      "n": 100000,
+      "passos": 15.2,
+      "tempo_us": 2.499999936844688,
+      "repeticoes": 50000,
+      "indice": -2
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 1000000,
+      "passos": 1.0,
+      "tempo_us": 0.30000046535860747,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "melhor caso (1o elemento)",
+      "n": 1000000,
+      "passos": 19.0,
+      "tempo_us": 2.7999994927085936,
+      "repeticoes": 2000,
+      "indice": 0
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 1000000,
+      "passos": 1000000.0,
+      "tempo_us": 80521.30000032776,
+      "repeticoes": 3,
+      "indice": 999999
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (ultimo elemento)",
+      "n": 1000000,
+      "passos": 20.0,
+      "tempo_us": 2.9000002541579306,
+      "repeticoes": 2000,
+      "indice": 999999
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 1000000,
+      "passos": 1000000.0,
+      "tempo_us": 81304.99999970198,
+      "repeticoes": 3,
+      "indice": -1
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "pior caso (alvo ausente)",
+      "n": 1000000,
+      "passos": 19.0,
+      "tempo_us": 3.7999998312443495,
+      "repeticoes": 2000,
+      "indice": -1
+    },
+    {
+      "algoritmo": "linear",
+      "cenario": "caso medio (aleatorio)",
+      "n": 1000000,
+      "passos": 542017.88,
+      "tempo_us": 57408.95000008095,
+      "repeticoes": 260,
+      "indice": -2
+    },
+    {
+      "algoritmo": "binaria",
+      "cenario": "caso medio (aleatorio)",
+      "n": 1000000,
+      "passos": 18.96,
+      "tempo_us": 3.4000004234258085,
+      "repeticoes": 50000,
+      "indice": -2
+    }
+  ],
+  "ordenacao": {
+    "n": 1000000,
+    "tempo_ordenacao_us": 451750.60000019585,
+    "tempo_linear_us": 57408.95000008095,
+    "tempo_binaria_us": 3.4000004234258085,
+    "equilibrio_consultas": 7.869458615114583
+  },
+  "graficos": [
+    "grafico_passos.png",
+    "grafico_tempo.png",
+    "grafico_speedup.png"
+  ],
+  "duracao_total_s": 26.97
+}
