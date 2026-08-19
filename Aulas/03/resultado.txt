@@ -1,0 +1,31 @@
+COMPARACAO POR TEMPO: BUSCA LINEAR x BUSCA BINARIA
+==================================================================
+Tamanho da lista ..: 1000000 numeros (de 0 ate 999999)
+Numero procurado ..: 999999 (o ultimo da lista = pior caso)
+Execucoes .........: 3
+
+EXECUCAO 1
+  1o resultado - busca linear  : posicao 999999 | 1000000 passos |   30.1750 ms
+  2o resultado - busca binaria : posicao 999999 |      20 passos |    0.0104 ms
+  --> a binaria foi 2901 vezes mais rapida
+
+EXECUCAO 2
+  1o resultado - busca linear  : posicao 999999 | 1000000 passos |   33.1863 ms
+  2o resultado - busca binaria : posicao 999999 |      20 passos |    0.0097 ms
+  --> a binaria foi 3421 vezes mais rapida
+
+EXECUCAO 3
+  1o resultado - busca linear  : posicao 999999 | 1000000 passos |   35.3661 ms
+  2o resultado - busca binaria : posicao 999999 |      20 passos |    0.0228 ms
+  --> a binaria foi 1551 vezes mais rapida
+
+MEDIA DAS 3 EXECUCOES
+==================================================================
+  Busca linear  - O(n) .....:   32.9091 ms
+  Busca binaria - O(log n) .:    0.0143 ms
+  A busca binaria foi 2301 vezes mais rapida.
+
+PASSOS NO PIOR CASO (o que explica a diferenca de tempo)
+==================================================================
+  Busca linear  : 1000000 passos (olhou a lista toda)
+  Busca binaria : 20 passos (cortou a lista no meio 20 vezes)
