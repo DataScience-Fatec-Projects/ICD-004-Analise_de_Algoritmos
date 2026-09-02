@@ -1,29 +1,7 @@
 BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT
 ======================================================================
 
-1) PASSO A PASSO DO EXEMPLO DO ENUNCIADO [6, 3, 8, 5, 2]
-----------------------------------------------------------------------
-  Primeira passagem:
-    compara 6 e 3 -> troca     -> [3, 6, 8, 5, 2]
-    compara 6 e 8 -> nao troca -> [3, 6, 8, 5, 2]
-    compara 8 e 5 -> troca     -> [3, 6, 5, 8, 2]
-    compara 8 e 2 -> troca     -> [3, 6, 5, 2, 8]
-
-  Segunda passagem:
-    compara 3 e 6 -> nao troca -> [3, 6, 5, 2, 8]
-    compara 6 e 5 -> troca     -> [3, 5, 6, 2, 8]
-    compara 6 e 2 -> troca     -> [3, 5, 2, 6, 8]
-
-  Terceira passagem:
-    compara 3 e 5 -> nao troca -> [3, 5, 2, 6, 8]
-    compara 5 e 2 -> troca     -> [3, 2, 5, 6, 8]
-
-  Quarta passagem:
-    compara 3 e 2 -> troca     -> [2, 3, 5, 6, 8]
-
-  resultado final: [2, 3, 5, 6, 8] (10 comparacoes, 7 trocas)
-
-2) OS TRES CENARIOS COM n = 5
+1) OS TRES CENARIOS COM n = 5
 ----------------------------------------------------------------------
   Cenario                    Lista             BUBBLE SORT      SELECTION SORT  
                                                comp / trocas    comp / trocas   
@@ -31,7 +9,7 @@ BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT
   Medio caso (aleatoria)     [3, 5, 1, 4, 2]     10 / 6           10 / 2        
   Pior caso (invertida)      [5, 4, 3, 2, 1]     10 / 10          10 / 2        
 
-3) CRESCIMENTO DAS OPERACOES CONFORME O TAMANHO DA LISTA
+2) CRESCIMENTO DAS OPERACOES CONFORME O TAMANHO DA LISTA
 ----------------------------------------------------------------------
      n  cenario   bubble comp  bubble trocas  select comp  select trocas
      5  melhor              4              0           10              0
@@ -54,7 +32,7 @@ BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT
    500  medio          124372          62535       124750            493
    500  pior           124750         124750       124750            250
 
-4) POR QUE O NUMERO DE OPERACOES VARIA?
+3) POR QUE O NUMERO DE OPERACOES VARIA?
 ----------------------------------------------------------------------
   O Bubble Sort so troca quando encontra um par vizinho fora de
   ordem. Logo, o trabalho dele depende de QUANTO a lista ja esta
@@ -72,11 +50,11 @@ BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT
     metade dos pares esta fora de ordem, entao o numero de trocas
     fica perto da metade do pior caso. Tambem e O(n^2).
 
-  A tabela do item 3 confirma: quando n dobra, as comparacoes do
+  A tabela do item 2 confirma: quando n dobra, as comparacoes do
   pior caso ficam cerca de 4 vezes maiores - exatamente o que se
   espera de um algoritmo quadratico (2^2 = 4).
 
-5) COMPARACAO COM O SELECTION SORT
+4) COMPARACAO COM O SELECTION SORT
 ----------------------------------------------------------------------
   O Selection Sort percorre todo o trecho restante para achar o
   menor elemento, sem aproveitar a ordem que ja existe. Por isso

@@ -22,8 +22,6 @@ MELHOR_CASO = [1, 2, 3, 4, 5]      # ja ordenada
 MEDIO_CASO = [3, 5, 1, 4, 2]       # ordem aleatoria
 PIOR_CASO = [5, 4, 3, 2, 1]        # ordem inversa
 
-EXEMPLO_ENUNCIADO = [6, 3, 8, 5, 2]
-
 TAMANHOS = [5, 10, 50, 100, 500]   # para mostrar o crescimento das operacoes
 SEMENTE = 42                       # deixa o sorteio sempre igual
 
@@ -99,60 +97,19 @@ def mostrar(texto=""):
     relatorio.append(texto)
 
 
-def bubble_sort_passo_a_passo(lista_original):
-    """Mesmo algoritmo do item 1, mas mostrando cada comparacao (didatico)."""
-    lista = list(lista_original)
-    comparacoes = 0
-    trocas = 0
-    n = len(lista)
-    nomes = ["Primeira", "Segunda", "Terceira", "Quarta", "Quinta"]
-
-    for passagem in range(n - 1):
-        mostrar(f"  {nomes[passagem]} passagem:")
-        houve_troca = False
-
-        for i in range(n - 1 - passagem):
-            a = lista[i]
-            b = lista[i + 1]
-            comparacoes += 1
-            if a > b:
-                lista[i], lista[i + 1] = b, a
-                trocas += 1
-                houve_troca = True
-                acao = "troca    "
-            else:
-                acao = "nao troca"
-            mostrar(f"    compara {a} e {b} -> {acao} -> {lista}")
-
-        if not houve_troca:
-            mostrar("    nenhuma troca nesta passagem -> lista ordenada")
-            break
-        mostrar()
-
-    return lista, comparacoes, trocas
-
-
 mostrar("BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT")
 mostrar("=" * 70)
 mostrar()
 
 
-# --- Parte 1: passo a passo do exemplo do enunciado -------------------------
-mostrar(f"1) PASSO A PASSO DO EXEMPLO DO ENUNCIADO {EXEMPLO_ENUNCIADO}")
-mostrar("-" * 70)
-_final, _comp, _troc = bubble_sort_passo_a_passo(EXEMPLO_ENUNCIADO)
-mostrar(f"  resultado final: {_final} ({_comp} comparacoes, {_troc} trocas)")
-mostrar()
-
-
-# --- Parte 2: os tres cenarios pedidos (n = 5) ------------------------------
+# --- Parte 1: os tres cenarios pedidos (n = 5) ------------------------------
 cenarios = [
     ("Melhor caso (ja ordenada)", MELHOR_CASO),
     ("Medio caso (aleatoria)", MEDIO_CASO),
     ("Pior caso (invertida)", PIOR_CASO),
 ]
 
-mostrar("2) OS TRES CENARIOS COM n = 5")
+mostrar("1) OS TRES CENARIOS COM n = 5")
 mostrar("-" * 70)
 mostrar(f"  {'Cenario':<26} {'Lista':<17} "
         f"{'BUBBLE SORT':<16} {'SELECTION SORT':<16}")
@@ -175,8 +132,8 @@ for nome, lista in cenarios:
                            f'{comp_s},{troc_s}')
 mostrar()
 
-# --- Parte 3: como as operacoes crescem quando a lista aumenta --------------
-mostrar("3) CRESCIMENTO DAS OPERACOES CONFORME O TAMANHO DA LISTA")
+# --- Parte 2: como as operacoes crescem quando a lista aumenta --------------
+mostrar("2) CRESCIMENTO DAS OPERACOES CONFORME O TAMANHO DA LISTA")
 mostrar("-" * 70)
 mostrar(f"  {'n':>4}  {'cenario':<8} "
         f"{'bubble comp':>12} {'bubble trocas':>14} "
@@ -201,11 +158,11 @@ for n in TAMANHOS:
         linhas_csv.append(f"{n},{rotulo},{comp_b},{troc_b},{comp_s},{troc_s}")
     mostrar()
 
-# --- Partes 4 e 5: analise dos resultados -----------------------------------
+# --- Partes 3 e 4: analise dos resultados -----------------------------------
 tamanho = len(MELHOR_CASO)
 maximo = tamanho * (tamanho - 1) // 2   # n(n-1)/2 = numero maximo de comparacoes
 
-mostrar("4) POR QUE O NUMERO DE OPERACOES VARIA?")
+mostrar("3) POR QUE O NUMERO DE OPERACOES VARIA?")
 mostrar("-" * 70)
 mostrar("  O Bubble Sort so troca quando encontra um par vizinho fora de")
 mostrar("  ordem. Logo, o trabalho dele depende de QUANTO a lista ja esta")
@@ -223,12 +180,12 @@ mostrar("  - Medio caso (lista aleatoria): fica entre os dois. Em media")
 mostrar("    metade dos pares esta fora de ordem, entao o numero de trocas")
 mostrar("    fica perto da metade do pior caso. Tambem e O(n^2).")
 mostrar()
-mostrar("  A tabela do item 3 confirma: quando n dobra, as comparacoes do")
+mostrar("  A tabela do item 2 confirma: quando n dobra, as comparacoes do")
 mostrar("  pior caso ficam cerca de 4 vezes maiores - exatamente o que se")
 mostrar("  espera de um algoritmo quadratico (2^2 = 4).")
 mostrar()
 
-mostrar("5) COMPARACAO COM O SELECTION SORT")
+mostrar("4) COMPARACAO COM O SELECTION SORT")
 mostrar("-" * 70)
 mostrar("  O Selection Sort percorre todo o trecho restante para achar o")
 mostrar("  menor elemento, sem aproveitar a ordem que ja existe. Por isso")
