@@ -1,0 +1,96 @@
+BUBBLE SORT: CONTAGEM DE OPERACOES E COMPARACAO COM O SELECTION SORT
+======================================================================
+
+1) PASSO A PASSO DO EXEMPLO DO ENUNCIADO [6, 3, 8, 5, 2]
+----------------------------------------------------------------------
+  Primeira passagem:
+    compara 6 e 3 -> troca     -> [3, 6, 8, 5, 2]
+    compara 6 e 8 -> nao troca -> [3, 6, 8, 5, 2]
+    compara 8 e 5 -> troca     -> [3, 6, 5, 8, 2]
+    compara 8 e 2 -> troca     -> [3, 6, 5, 2, 8]
+
+  Segunda passagem:
+    compara 3 e 6 -> nao troca -> [3, 6, 5, 2, 8]
+    compara 6 e 5 -> troca     -> [3, 5, 6, 2, 8]
+    compara 6 e 2 -> troca     -> [3, 5, 2, 6, 8]
+
+  Terceira passagem:
+    compara 3 e 5 -> nao troca -> [3, 5, 2, 6, 8]
+    compara 5 e 2 -> troca     -> [3, 2, 5, 6, 8]
+
+  Quarta passagem:
+    compara 3 e 2 -> troca     -> [2, 3, 5, 6, 8]
+
+  resultado final: [2, 3, 5, 6, 8] (10 comparacoes, 7 trocas)
+
+2) OS TRES CENARIOS COM n = 5
+----------------------------------------------------------------------
+  Cenario                    Lista             BUBBLE SORT      SELECTION SORT  
+                                               comp / trocas    comp / trocas   
+  Melhor caso (ja ordenada)  [1, 2, 3, 4, 5]      4 / 0           10 / 0        
+  Medio caso (aleatoria)     [3, 5, 1, 4, 2]     10 / 6           10 / 2        
+  Pior caso (invertida)      [5, 4, 3, 2, 1]     10 / 10          10 / 2        
+
+3) CRESCIMENTO DAS OPERACOES CONFORME O TAMANHO DA LISTA
+----------------------------------------------------------------------
+     n  cenario   bubble comp  bubble trocas  select comp  select trocas
+     5  melhor              4              0           10              0
+     5  medio               9              4           10              2
+     5  pior               10             10           10              2
+
+    10  melhor              9              0           45              0
+    10  medio              42             12           45              6
+    10  pior               45             45           45              5
+
+    50  melhor             49              0         1225              0
+    50  medio            1170            533         1225             45
+    50  pior             1225           1225         1225             25
+
+   100  melhor             99              0         4950              0
+   100  medio            4922           2766         4950             96
+   100  pior             4950           4950         4950             50
+
+   500  melhor            499              0       124750              0
+   500  medio          124372          62535       124750            493
+   500  pior           124750         124750       124750            250
+
+4) POR QUE O NUMERO DE OPERACOES VARIA?
+----------------------------------------------------------------------
+  O Bubble Sort so troca quando encontra um par vizinho fora de
+  ordem. Logo, o trabalho dele depende de QUANTO a lista ja esta
+  ordenada:
+
+  - Melhor caso (lista ordenada): a primeira passagem nao troca
+    nada, o algoritmo percebe isso e para. Faz apenas n-1 =
+    4 comparacoes e 0 trocas. Comportamento O(n).
+
+  - Pior caso (lista invertida): TODO par comparado esta fora de
+    ordem, entao ele troca em todas as comparacoes. Faz
+    n(n-1)/2 = 10 comparacoes e 10 trocas. Comportamento O(n^2).
+
+  - Medio caso (lista aleatoria): fica entre os dois. Em media
+    metade dos pares esta fora de ordem, entao o numero de trocas
+    fica perto da metade do pior caso. Tambem e O(n^2).
+
+  A tabela do item 3 confirma: quando n dobra, as comparacoes do
+  pior caso ficam cerca de 4 vezes maiores - exatamente o que se
+  espera de um algoritmo quadratico (2^2 = 4).
+
+5) COMPARACAO COM O SELECTION SORT
+----------------------------------------------------------------------
+  O Selection Sort percorre todo o trecho restante para achar o
+  menor elemento, sem aproveitar a ordem que ja existe. Por isso
+  ele faz SEMPRE n(n-1)/2 comparacoes, nos tres cenarios: com
+  n = 5 sao 10 comparacoes na lista ordenada, na aleatoria e na
+  invertida. Ele e O(n^2) inclusive no melhor caso.
+
+  Em compensacao, faz no maximo n-1 trocas, porque cada elemento
+  vai direto para o lugar certo. O Bubble Sort chega a 10 trocas
+  com n = 5.
+
+  Resumindo:
+  - lista quase ordenada -> Bubble Sort vence (para cedo, O(n)).
+  - trocas caras (registros grandes) -> Selection Sort vence,
+    porque movimenta muito menos dados.
+  - listas grandes -> os dois sao ruins, O(n^2). Vale usar
+    algoritmos O(n log n), como Merge Sort ou Quick Sort.

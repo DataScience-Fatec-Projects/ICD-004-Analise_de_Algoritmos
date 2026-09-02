@@ -1,0 +1,16 @@
+n,cenario,bubble_comparacoes,bubble_trocas,selection_comparacoes,selection_trocas
+5,melhor,4,0,10,0
+5,medio,9,4,10,2
+5,pior,10,10,10,2
+10,melhor,9,0,45,0
+10,medio,42,12,45,6
+10,pior,45,45,45,5
+50,melhor,49,0,1225,0
+50,medio,1170,533,1225,45
+50,pior,1225,1225,1225,25
+100,melhor,99,0,4950,0
+100,medio,4922,2766,4950,96
+100,pior,4950,4950,4950,50
+500,melhor,499,0,124750,0
+500,medio,124372,62535,124750,493
+500,pior,124750,124750,124750,250

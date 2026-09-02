@@ -1,0 +1,4 @@
+cenario,lista,bubble_comparacoes,bubble_trocas,selection_comparacoes,selection_trocas
+Melhor caso (ja ordenada),"[1, 2, 3, 4, 5]",4,0,10,0
+Medio caso (aleatoria),"[3, 5, 1, 4, 2]",10,6,10,2
+Pior caso (invertida),"[5, 4, 3, 2, 1]",10,10,10,2
