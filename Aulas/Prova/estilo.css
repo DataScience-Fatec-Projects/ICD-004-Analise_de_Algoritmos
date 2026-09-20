@@ -1,0 +1,47 @@
+/* Estilo de impressao da revisao (A4). Usado por gerar_pdf.py via pandoc + Edge headless. */
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+html { font-size: 10.5pt; }
+body {
+  font-family: Calibri, "Segoe UI", Arial, sans-serif;
+  line-height: 1.38; color: #111;
+  max-width: none; margin: 0; padding: 0;
+}
+header#title-block-header { margin-bottom: 14pt; }
+h1.title { font-size: 22pt; margin: 0 0 4pt 0; border: 0; page-break-before: auto; }
+p.subtitle { font-size: 11.5pt; color: #444; margin: 0; }
+h1 { font-size: 18pt; color: #0b2a4a; border-bottom: 2px solid #0b2a4a; padding-bottom: 3pt;
+     margin: 0 0 10pt 0; page-break-before: always; }
+h2 { font-size: 14pt; color: #1a3d6d; margin: 16pt 0 6pt 0; page-break-after: avoid; }
+h3 { font-size: 12pt; margin: 12pt 0 4pt 0; page-break-after: avoid; }
+p { margin: 5pt 0; }
+ul, ol { margin: 4pt 0 6pt 0; padding-left: 20pt; }
+li { margin: 2pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 9.5pt; page-break-inside: auto; }
+thead { display: table-header-group; }
+tr, th, td { page-break-inside: avoid; }
+th, td { border: 1px solid #9a9a9a; padding: 2.5pt 6pt; text-align: left; vertical-align: top; }
+th { background: #e6edf7; }
+tr:nth-child(even) td { background: #f7f8fa; }
+pre { background: #f4f5f7; border: 1px solid #d9d9d9; border-radius: 3px; padding: 6pt 8pt; margin: 6pt 0 10pt 0;
+      font-size: 8.8pt; line-height: 1.3; white-space: pre-wrap; page-break-inside: auto; }
+blockquote pre { page-break-inside: avoid; }        /* blocos curtos dentro das respostas ficam inteiros */
+p + pre { margin-top: 2pt; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 9.2pt; }
+pre code { font-size: 8.8pt; }
+blockquote { border-left: 4px solid #2e7d32; background: #f1f8f1; margin: 4pt 0 12pt 0; padding: 4pt 10pt;
+             page-break-inside: avoid; }
+blockquote blockquote { border-left-color: #999; background: #fafafa; }
+blockquote table { font-size: 9pt; }
+blockquote pre { background: #fff; }
+hr { border: 0; border-top: 1px solid #ccc; margin: 10pt 0; }
+nav#TOC { font-size: 9.5pt; border: 1px solid #ddd; padding: 6pt 10pt; margin: 10pt 0; background: #fafafa; }
+nav#TOC > ul { list-style: none; padding-left: 0; margin: 0; }
+nav#TOC > ul > li { margin: 3pt 0; font-weight: bold; }
+nav#TOC ul ul { list-style: none; padding-left: 14pt; font-weight: normal; margin: 1pt 0; }
+nav#TOC a { color: #1a3d6d; text-decoration: none; }
+
+/* indice de palavras-chave do catalogo: lista em 3 colunas */
+.colunas { column-count: 3; column-gap: 16pt; font-size: 9pt; }
+.colunas ul { margin: 0; padding-left: 0; list-style: none; }
+.colunas li { margin: 0 0 1.5pt 0; break-inside: avoid; }
+.colunas a { color: #1a3d6d; text-decoration: none; }
