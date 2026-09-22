@@ -14,6 +14,7 @@ AQUI = Path(__file__).resolve().parent
 CSS = AQUI / "estilo.css"
 DOCUMENTOS = [
     AQUI / "Revisao_Prova_Exercicios.md",
+    AQUI / "Guia_Algoritmos.md",
     AQUI / "Catalogo_Scripts.md",
 ]
 

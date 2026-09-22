@@ -8,7 +8,7 @@ lang: pt-BR
 >
 > **Como usar:** a Parte 1 é o resumo para consulta rápida; a Parte 2 traz os códigos prontos; a Parte 3 tem os exercícios com a resposta logo abaixo de cada um; a Parte 4 é um simulado com gabarito no fim; a Parte 5 tem tabelas numéricas (potências de 2, Fibonacci, n(n−1)/2) para não perder tempo com conta na prova.
 >
-> **Material complementar:** o **Catálogo de Scripts** (`Catalogo_Scripts.pdf` e a pasta `scripts/`) traz 20 scripts executáveis, cada um com o código comentado, a saída real e as perguntas prováveis sobre ele, com índice por assunto, por pergunta e por palavra-chave.
+> **Material complementar:** o **Guia Simples dos Algoritmos** (`Guia_Algoritmos.pdf`) explica em linguagem simples o que cada algoritmo faz, com analogia, passo a passo, exemplo e comparativos entre eles. O **Catálogo de Scripts** (`Catalogo_Scripts.pdf` e a pasta `scripts/`) traz 20 scripts executáveis, cada um com o código comentado, a saída real e as perguntas prováveis sobre ele, com índice por assunto, por pergunta e por palavra-chave.
 
 ---
 

@@ -364,7 +364,7 @@ if __name__ == "__main__":
         print(f"  n={n2:<6} passos no pior caso={p}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 BUSCA LINEAR em lista de 1000 elementos
@@ -451,7 +451,7 @@ if __name__ == "__main__":
     print("\nDobrar n acrescenta apenas 1 passo: crescimento logaritmico, O(log n).")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 Lista ordenada: [3, 8, 12, 19, 25, 31, 37, 42, 49, 56]
@@ -538,7 +538,7 @@ if __name__ == "__main__":
         print("resultado:", r)
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 
@@ -642,16 +642,16 @@ if __name__ == "__main__":
     print("passo da linear e ha custos fixos (chamada, relogio). Passos nao sao segundos.")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 Lista de 1.000.000 elementos, alvo = ultimo (pior caso)
 ------------------------------------------------------------
-Busca linear  - O(n)     :   1000000 passos |    28.2143 ms
-Busca binaria - O(log n) :        20 passos |     0.0015 ms
+Busca linear  - O(n)     :   1000000 passos |    40.6234 ms
+Busca binaria - O(log n) :        20 passos |     0.0022 ms
 
 Razao de passos:      50000 x
-Razao de tempo :      18810 x
+Razao de tempo :      18465 x
 
 A razao de tempo e menor porque cada passo da binaria custa mais que um
 passo da linear e ha custos fixos (chamada, relogio). Passos nao sao segundos.
@@ -721,7 +721,7 @@ if __name__ == "__main__":
         print(f"  n={n:<4} comparacoes={comp:<7} n(n-1)/2={n * (n - 1) // 2}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 
@@ -829,7 +829,7 @@ if __name__ == "__main__":
         print(f"  n={n:<4} comparacoes={comp:<7} trocas={troc:<7} n(n-1)/2={n * (n - 1) // 2}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 
@@ -949,7 +949,7 @@ if __name__ == "__main__":
     print("Fator ~4 a cada dobra = crescimento quadratico, O(n^2).")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
     n cenario     bubble comp  bubble troc  select comp  select troc
@@ -1064,7 +1064,7 @@ if __name__ == "__main__":
     print(f"  lista ordenada  : chamadas={c2:<5} altura={a2:<5} (= n: pior caso, O(n^2))")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 
@@ -1187,19 +1187,19 @@ if __name__ == "__main__":
     print("Pivo do meio ou aleatorio: altura ~ log2 n e comparacoes ~ n log n -> O(n log n).")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 n = 1000 | n(n-1)/2 = 499500 | n*log2(n) ~ 10000
 lista        pivo        comparacoes  altura pilha  tempo (ms)
 --------------------------------------------------------------
-ordenada     primeiro         499500          1000      24.787
-ordenada     meio               7987            10       0.598
-ordenada     aleatorio          9972            19       0.943
+ordenada     primeiro         499500          1000      32.882
+ordenada     meio               7987            10       0.852
+ordenada     aleatorio          9972            19       1.363
 
-embaralhada  primeiro          10429            20       0.909
-embaralhada  meio               9995            21       0.899
-embaralhada  aleatorio         10536            20       1.087
+embaralhada  primeiro          10429            20       1.274
+embaralhada  meio               9995            21       1.277
+embaralhada  aleatorio         10536            20       1.556
 
 Pivo fixo + lista ordenada: altura = n e comparacoes = n(n-1)/2 -> O(n^2).
 Pivo do meio ou aleatorio: altura ~ log2 n e comparacoes ~ n log n -> O(n log n).
@@ -1274,7 +1274,7 @@ if __name__ == "__main__":
             print(f"  n={n:<5} {nome:<10} comparacoes={comparacoes:<6} altura={altura_max:<3} n*log2(n)={int(n * math.log2(n))}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 Lista: [38, 27, 43, 3, 9, 82, 10]
@@ -1407,7 +1407,7 @@ if __name__ == "__main__":
         print("  RecursionError:", erro)
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 soma([2, 4, 6]):
@@ -1503,7 +1503,7 @@ if __name__ == "__main__":
     print("\nA pilha volta a ficar vazia:", pilha)
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 greet('maggie'):
@@ -1605,7 +1605,7 @@ if __name__ == "__main__":
     print("Razao converge para phi = 1,618 (razao aurea): crescimento exponencial.")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 ARVORE DE CHAMADAS DE fib(5)
@@ -1740,7 +1740,7 @@ if __name__ == "__main__":
     print("  solucao: preencher o cache de baixo para cima (bottom-up) ou usar a versao iterativa.")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
   n  recursivo puro  memoizado   2n-1  vezes menos
@@ -1754,7 +1754,7 @@ if __name__ == "__main__":
 @lru_cache: fib_lru(30) = 832040
   cache_info: CacheInfo(hits=28, misses=31, maxsize=None, currsize=31)  <- misses = valores calculados; hits = reaproveitados
 
-fib_lru(300): 1a chamada 323.5 us | 2a chamada (cache quente) 0.20 us
+fib_lru(300): 1a chamada 405.9 us | 2a chamada (cache quente) 0.50 us
 
 Top-down e recursivo: para n grande estoura a pilha (limite = 1000 )
   fib_memo(5000) -> RecursionError
@@ -1864,17 +1864,17 @@ if __name__ == "__main__":
     print("Recursivo puro: tempo exponencial, mas pilha O(n). Memoizado: troca memoria O(n) por tempo O(n).")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 Corretude OK: as tres versoes coincidem para n = 0..20: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] ...
 
   n  recursivo (s)  memoizado (s)  iterativo (s)  ganho memo
- 20       0.002018     0.00000468     0.00000037        432x
- 22       0.005418     0.00000532     0.00000040       1019x
- 24       0.015819     0.00000655     0.00000051       2413x
- 26       0.038708     0.00000620     0.00000048       6241x
- 28       0.103097     0.00000700     0.00000055      14730x
+ 20       0.002653     0.00000656     0.00000054        404x
+ 22       0.007011     0.00000751     0.00000060        933x
+ 24       0.018880     0.00000810     0.00000066       2332x
+ 26       0.052492     0.00000859     0.00000071       6112x
+ 28       0.130937     0.00000918     0.00000077      14260x
 
 Memoria (n = 25):
   recursivo  pilha maxima=25  quadros | memoria auxiliar: nenhuma (so a pilha)
@@ -1945,7 +1945,7 @@ if __name__ == "__main__":
         print(f"  => quadrados de {r} x {r} | chamadas={chamadas} | math.gcd={math.gcd(a, b)}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 
@@ -2081,7 +2081,7 @@ if __name__ == "__main__":
         print(f"{nome:<11} {n:>6} {a:>10} {b:>10} {b / a:>7.2f}x   {assinaturas[nome]}")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 classe           n     ops(n)    ops(2n)    fator   assinatura
@@ -2171,7 +2171,7 @@ if __name__ == "__main__":
     print(f"   minimo={min(tempos):.4f} s  mediana={statistics.median(tempos):.4f} s  media={statistics.mean(tempos):.4f} s")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
 1) Resolucao do relogio
@@ -2193,8 +2193,8 @@ if __name__ == "__main__":
    bubble_sort conferido contra sorted() em 200 listas aleatorias: OK
 
 5) timeit.repeat: menor tempo de varias rodadas
-   5 rodadas (s): [0.0021, 0.002, 0.002, 0.0025, 0.0021]
-   minimo=0.0020 s  mediana=0.0021 s  media=0.0022 s
+   5 rodadas (s): [0.003, 0.0031, 0.0027, 0.0028, 0.0027]
+   minimo=0.0027 s  mediana=0.0028 s  media=0.0028 s
 ```
 
 ## [19] Calculadora para a prova: passos da busca binária, n(n-1)/2, Fibonacci, chamadas, potências de 2 {#s19}
@@ -2274,7 +2274,7 @@ if __name__ == "__main__":
         print(f"  se fosse {classe:<10}: {estimar(2, 1_000, 10_000, classe):>8.1f} s")
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
              n bin. livro bin. impl.               n(n-1)/2       n*log2 n
@@ -2381,21 +2381,21 @@ if __name__ == "__main__":
         print(f"  {n} cidades: {math.factorial(n - 1):>22,} rotas -> {texto}".replace(",", "."))
 ```
 
-**Saída de exemplo** (execução real em 20/09/2026)
+**Saída de exemplo** (execução real em 22/09/2026)
 
 ```text
  cidades  rotas (n-1)!  tempo (s)  crescimento
 ------------------------------------------------
        4             6     0.0000            -
-       5            24     0.0000         1.2x
-       6           120     0.0001         4.6x
-       7           720     0.0008         6.3x
-       8          5040     0.0060         7.7x
-       9         40320     0.0542         9.0x
+       5            24     0.0000         1.5x
+       6           120     0.0002         4.6x
+       7           720     0.0013         6.8x
+       8          5040     0.0105         8.2x
+       9         40320     0.1074        10.2x
 
 Estimativa com o mesmo custo por rota:
-  12 cidades:             39.916.800 rotas -> 54 s
-  15 cidades:         87.178.291.200 rotas -> 1.4 dias
-  20 cidades: 121.645.100.408.832.000 rotas -> 5.181 anos
+  12 cidades:             39.916.800 rotas -> 106 s
+  15 cidades:         87.178.291.200 rotas -> 2.7 dias
+  20 cidades: 121.645.100.408.832.000 rotas -> 10.271 anos
 ```
 
