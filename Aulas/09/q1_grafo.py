@@ -26,32 +26,35 @@ metro = {
     'Engenheiro Goulart': ['Aeroporto-Guarulhos']
 }
 
-for estacao, vizinhos in metro.items():
-    print(f"{estacao:<22} -> {', '.join(vizinhos)}")
+# o print fica protegido: assim o q2 pode fazer "from q1_grafo import metro"
+# sem repetir toda esta saida
+if __name__ == "__main__":
+    for estacao, vizinhos in metro.items():
+        print(f"{estacao:<22} -> {', '.join(vizinhos)}")
 
-# grau = tamanho da lista de vizinhos; cada aresta aparece nas duas pontas,
-# entao soma dos graus = 2 x arestas (lema do aperto de maos)
-soma_graus = sum(len(vizinhos) for vizinhos in metro.values())
-total_arestas = soma_graus // 2
+    # grau = tamanho da lista de vizinhos; cada aresta aparece nas duas pontas,
+    # entao soma dos graus = 2 x arestas (lema do aperto de maos)
+    soma_graus = sum(len(vizinhos) for vizinhos in metro.values())
+    total_arestas = soma_graus // 2
 
-print(f"Total de vértices: {len(metro)}")
-print(f"Soma dos graus:    {soma_graus}")
-print(f"Total de arestas:  {total_arestas}")
+    print(f"Total de vértices: {len(metro)}")
+    print(f"Soma dos graus:    {soma_graus}")
+    print(f"Total de arestas:  {total_arestas}")
 
-# checagem de simetria: se A tem B como vizinho, B tem que ter A
-RED_BOLD = "[1;31m"
-RESET = "[0m"
+    # checagem de simetria: se A tem B como vizinho, B tem que ter A
+    RED_BOLD = "\033[1;31m"
+    RESET = "\033[0m"
 
-ok = True
-for estacao, vizinhos in metro.items():
-    for vizinho in vizinhos:
-        if vizinho not in metro:
-            ok = False
-            print(f"Vizinho {RED_BOLD}{vizinho}{RESET} (de {estacao}) sem chave própria.")
-        elif estacao not in metro[vizinho]:
-            ok = False
-            print(f"Ligação só de um lado: {estacao} -> {RED_BOLD}{vizinho}{RESET}, "
-                  f"mas {vizinho} não tem {estacao}.")
+    ok = True
+    for estacao, vizinhos in metro.items():
+        for vizinho in vizinhos:
+            if vizinho not in metro:
+                ok = False
+                print(f"Vizinho {RED_BOLD}{vizinho}{RESET} (de {estacao}) sem chave própria.")
+            elif estacao not in metro[vizinho]:
+                ok = False
+                print(f"Ligação só de um lado: {estacao} -> {RED_BOLD}{vizinho}{RESET}, "
+                      f"mas {vizinho} não tem {estacao}.")
 
-if ok:
-    print("Simetria OK: todas as ligações aparecem nos dois sentidos.")
+    if ok:
+        print("Simetria OK: todas as ligações aparecem nos dois sentidos.")
